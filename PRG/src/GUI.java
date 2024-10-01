@@ -17,12 +17,14 @@ public class GUI {
             frame.setTitle("PRG"); // Frame title
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Frame Close
 
+
             // CardLayout Panel
             CardLayout cardLayout = new CardLayout();
             JPanel cardPanel = new JPanel(cardLayout);
 
             // Title Screen Panel
             JPanel titleScreen = new JPanel(new BorderLayout());
+            titleScreen.setBackground(new Color(24, 22, 47));
 
             // Title Icon
             ImageIcon titleIcon = new ImageIcon("src/Sprites/title_concept_1.gif");
@@ -35,6 +37,7 @@ public class GUI {
             JButton commenceButton = new JButton(cbIcon);
             commenceButton.setBorderPainted(false); // Removes border
             commenceButton.setFocusPainted(false); // Removes Ugly Grey Square
+            commenceButton.setContentAreaFilled(false); // Removes Blue Indicator
 
             commenceButton.addActionListener(new ActionListener() {
                 @Override
@@ -49,9 +52,13 @@ public class GUI {
 
             // Second Screen panel
             JPanel secondScreen = new JPanel(new BorderLayout());
+
             JLabel newLabel = new JLabel("\"o . o\"");
             newLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            newLabel.setForeground(Color.CYAN);
             secondScreen.add(newLabel, BorderLayout.CENTER);
+
+            secondScreen.setBackground(new Color(24, 22, 47));
 
             // Add screens to the card panel
             cardPanel.add(titleScreen, "Title Screen");
