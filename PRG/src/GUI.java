@@ -25,11 +25,11 @@ public class GUI {
             JPanel titleScreen = new JPanel(new BorderLayout());
 
             // Title Icon
-            ImageIcon titleIcon = new ImageIcon("C:\\Users\\micha\\Documents\\GitHub\\Project-R\\PRG\\src\\Sprites\\title_concept_1.gif");
+            ImageIcon titleIcon = new ImageIcon("src/Sprites/title_concept_1.gif");
             JLabel titleLabel = new JLabel(titleIcon);
 
             // Create and resize image
-            ImageIcon cbIcon = new ImageIcon("C:\\Users\\micha\\Documents\\GitHub\\Project-R\\PRG\\src\\Sprites\\commence_button_1.gif");
+            ImageIcon cbIcon = new ImageIcon("src/Sprites/commence_button_1.gif");
 
             // Commence button
             JButton commenceButton = new JButton(cbIcon);
@@ -61,7 +61,7 @@ public class GUI {
             frame.add(cardPanel, BorderLayout.CENTER);
 
             new Thread(() -> {
-                playAudio("C:\\Users\\micha\\Documents\\GitHub\\Project-R\\PRG\\src\\Audio\\Minino.wav"); // Change to your audio file path
+                playAudio("src/Audio/Minino.wav");
             }).start();
 
             // Set frame visibility at the end
