@@ -8,12 +8,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class GUI {
-    public static void main() {
+    public static void main(){
         SwingUtilities.invokeLater(() -> {
             // Frame setup
             JFrame frame = new JFrame(); // Create frame
             frame.setLayout(new BorderLayout()); // Frame layout
-            frame.setSize(1000, 700); // Frame size
+            frame.setSize(1200, 900); // Frame size
             frame.setTitle("PRG"); // Frame title
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Frame Close
 
@@ -53,17 +53,15 @@ public class GUI {
             // Second Screen panel
             JPanel secondScreen = new JPanel(new BorderLayout());
 
-            JLabel newLabel = new JLabel("\"o . o\"");
-            newLabel.setHorizontalAlignment(SwingConstants.CENTER);
-            newLabel.setForeground(Color.CYAN);
-            secondScreen.add(newLabel, BorderLayout.CENTER);
-
+            ImageIcon theView = new ImageIcon("src/Sprites/the_view.gif");
+            JLabel tvSprite = new JLabel(theView);
             secondScreen.setBackground(new Color(24, 22, 47));
+            secondScreen.add(tvSprite, BorderLayout.CENTER);
 
             // Add screens to the card panel
             cardPanel.add(titleScreen, "Title Screen");
             cardPanel.add(secondScreen, "SecondScreen");
-
+            
             // Add cardPanel to the frame
             frame.add(cardPanel, BorderLayout.CENTER);
 
